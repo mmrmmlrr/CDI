@@ -11,7 +11,7 @@ extern const NSUInteger CDIOperationBatchSize;
 
 @class CDIOperation;
 
-typedef void (^CDIOperationCallback)(CDIOperation *sender, id output);
+typedef void (^CDIOperationCallback)(CDIOperation *sender, NSArray *managedObjectIDs);
 
 @interface CDIOperation : NSOperation
 

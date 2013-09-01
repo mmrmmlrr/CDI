@@ -13,16 +13,16 @@
 		69ED73478A6BED4462A95D99 /* CoreDataImport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69ED7D2905CDB05B45F8D610 /* CoreDataImport.xcdatamodeld */; };
 		69ED737C54E5637F6295BAB9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69ED79C0616532F9561E2BD0 /* Default-568h@2x.png */; };
 		69ED73C21210E706A6F07707 /* CoreDataImportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED78E3F28650427B744AA0 /* CoreDataImportTests.m */; };
-		69ED74AA2896513C73F45884 /* CDIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED71BDF0E69EAC67C4F5F0 /* CDIOperation.m */; };
 		69ED750A383132A65474E50A /* CBIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED7C93CCFC2340EB0E3B82 /* CBIAppDelegate.m */; };
+		69ED77331A63075062A0F71D /* CDIBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED79BF52F67B086025E931 /* CDIBatch.m */; };
 		69ED78B934059DAF7E58CFF1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69ED75C4C3B5A59E059589D9 /* Default@2x.png */; };
 		69ED78D52E17CCEBA1F91C5E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED7120B571BF8199D5EC19 /* CoreData.framework */; };
+		69ED79568364AF78B28F65B9 /* CDIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED79EFEF0CFA76205EB565 /* CDIOperation.m */; };
 		69ED79FE53CC3328AC8A9AB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED7D93D6A2818A09FFD59E /* Foundation.framework */; };
 		69ED7A98C631C63A4E955403 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED7C26016F28DAA8C193C6 /* CoreGraphics.framework */; };
 		69ED7C22AB58BC29DC77478D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED7D93D6A2818A09FFD59E /* Foundation.framework */; };
 		69ED7C41F15D485DC5CA10ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED792E2551B9CE857DAC1B /* main.m */; };
 		69ED7CE5445B20CA953DEF4E /* NSManagedObject+CDIPrimaryKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED76D734E1ED47AD31BFAE /* NSManagedObject+CDIPrimaryKeys.m */; };
-		69ED7CE65282B77F400A2A6C /* CDIBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 69ED7607EFBCC9DE7A8A112C /* CDIBatch.m */; };
 		69ED7CF21AB4DE801241176B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69ED7B0DFCCDD4C903A411E3 /* InfoPlist.strings */; };
 		69ED7D34CFD6443C8EE4686A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED7044B53C2C227043F281 /* UIKit.framework */; };
 		69ED7D97224D52345884C4DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69ED79E22D96553ED51A89FB /* InfoPlist.strings */; };
@@ -42,28 +42,28 @@
 /* Begin PBXFileReference section */
 		69ED7044B53C2C227043F281 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		69ED7120B571BF8199D5EC19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		69ED715BBC81B905C4EF6637 /* CDIOperation+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDIOperation+Protected.h"; sourceTree = "<group>"; };
-		69ED71BDF0E69EAC67C4F5F0 /* CDIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDIOperation.m; sourceTree = "<group>"; };
 		69ED71E5A71E9BC5A0779E46 /* NSManagedObject+CDIPrimaryKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CDIPrimaryKeys.h"; sourceTree = "<group>"; };
 		69ED71E96C64E47F1F23F92F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		69ED72D274935ACF088BF12F /* CoreDataImport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataImport.xcdatamodel; sourceTree = "<group>"; };
-		69ED7302145854314C2688DA /* CDIBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDIBatch.h; sourceTree = "<group>"; };
+		69ED73DAB54D55758078B812 /* CDIOperation+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDIOperation+Protected.h"; sourceTree = "<group>"; };
 		69ED73F1309803ECBC790E98 /* CoreDataImportTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataImportTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		69ED7501F5B38B0AF14B0F8A /* CDIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDIOperation.h; sourceTree = "<group>"; };
-		69ED755D8340AA3E7376EF48 /* CDIBatch+Package.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDIBatch+Package.h"; sourceTree = "<group>"; };
+		69ED74993F76813B26698C06 /* CDIBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDIBatch.h; sourceTree = "<group>"; };
 		69ED75C4C3B5A59E059589D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		69ED7607EFBCC9DE7A8A112C /* CDIBatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDIBatch.m; sourceTree = "<group>"; };
 		69ED76D734E1ED47AD31BFAE /* NSManagedObject+CDIPrimaryKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CDIPrimaryKeys.m"; sourceTree = "<group>"; };
 		69ED77948590F90E822A1B85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		69ED786FAD518EEF2DAC8503 /* CDIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDIExtension.h; sourceTree = "<group>"; };
 		69ED7897D807100DBA58F72B /* CBIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBIAppDelegate.h; sourceTree = "<group>"; };
+		69ED78B51F9F81221A723D00 /* CDIBatch+Package.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDIBatch+Package.h"; sourceTree = "<group>"; };
 		69ED78E3F28650427B744AA0 /* CoreDataImportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataImportTests.m; sourceTree = "<group>"; };
 		69ED792E2551B9CE857DAC1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69ED795F7C78C7523FF63AE0 /* CoreDataImportTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "CoreDataImportTests-Info.plist"; sourceTree = "<group>"; };
 		69ED79ACB1C52983550E9837 /* CoreDataImport-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreDataImport-Prefix.pch"; sourceTree = "<group>"; };
+		69ED79BF52F67B086025E931 /* CDIBatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDIBatch.m; sourceTree = "<group>"; };
 		69ED79C0616532F9561E2BD0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		69ED79EFEF0CFA76205EB565 /* CDIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDIOperation.m; sourceTree = "<group>"; };
 		69ED7A526E946237B6016827 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		69ED7A6158DFAB5390456E7E /* CoreDataImport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "CoreDataImport-Info.plist"; sourceTree = "<group>"; };
+		69ED7B06EAF3BB2FB6FD760D /* CDIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDIExtension.h; sourceTree = "<group>"; };
+		69ED7BC0499C86941774D924 /* CDIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDIOperation.h; sourceTree = "<group>"; };
 		69ED7C26016F28DAA8C193C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		69ED7C93CCFC2340EB0E3B82 /* CBIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBIAppDelegate.m; sourceTree = "<group>"; };
 		69ED7D066406459AF48254FB /* CoreDataImport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataImport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +140,19 @@
 			path = CoreDataImportTests;
 			sourceTree = "<group>";
 		};
+		69ED7429A97B3C9CE5E5BD07 /* Import Operation */ = {
+			isa = PBXGroup;
+			children = (
+				69ED78B51F9F81221A723D00 /* CDIBatch+Package.h */,
+				69ED74993F76813B26698C06 /* CDIBatch.h */,
+				69ED79BF52F67B086025E931 /* CDIBatch.m */,
+				69ED7BC0499C86941774D924 /* CDIOperation.h */,
+				69ED73DAB54D55758078B812 /* CDIOperation+Protected.h */,
+				69ED79EFEF0CFA76205EB565 /* CDIOperation.m */,
+			);
+			path = "Import Operation";
+			sourceTree = "<group>";
+		};
 		69ED76661DAD14B4D73874E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,15 +179,10 @@
 		69ED78DE0FA6978F3A7B7961 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				69ED71BDF0E69EAC67C4F5F0 /* CDIOperation.m */,
-				69ED7501F5B38B0AF14B0F8A /* CDIOperation.h */,
-				69ED715BBC81B905C4EF6637 /* CDIOperation+Protected.h */,
 				69ED76D734E1ED47AD31BFAE /* NSManagedObject+CDIPrimaryKeys.m */,
 				69ED71E5A71E9BC5A0779E46 /* NSManagedObject+CDIPrimaryKeys.h */,
-				69ED7607EFBCC9DE7A8A112C /* CDIBatch.m */,
-				69ED7302145854314C2688DA /* CDIBatch.h */,
-				69ED755D8340AA3E7376EF48 /* CDIBatch+Package.h */,
-				69ED786FAD518EEF2DAC8503 /* CDIExtension.h */,
+				69ED7429A97B3C9CE5E5BD07 /* Import Operation */,
+				69ED7E180DF15A1BE7660C6A /* Extension */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -188,6 +196,14 @@
 				69ED7D2905CDB05B45F8D610 /* CoreDataImport.xcdatamodeld */,
 			);
 			path = CoreDataImport;
+			sourceTree = "<group>";
+		};
+		69ED7E180DF15A1BE7660C6A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				69ED7B06EAF3BB2FB6FD760D /* CDIExtension.h */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +317,9 @@
 				69ED7C41F15D485DC5CA10ED /* main.m in Sources */,
 				69ED750A383132A65474E50A /* CBIAppDelegate.m in Sources */,
 				69ED73478A6BED4462A95D99 /* CoreDataImport.xcdatamodeld in Sources */,
-				69ED74AA2896513C73F45884 /* CDIOperation.m in Sources */,
 				69ED7CE5445B20CA953DEF4E /* NSManagedObject+CDIPrimaryKeys.m in Sources */,
-				69ED7CE65282B77F400A2A6C /* CDIBatch.m in Sources */,
+				69ED77331A63075062A0F71D /* CDIBatch.m in Sources */,
+				69ED79568364AF78B28F65B9 /* CDIOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

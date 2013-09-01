@@ -10,6 +10,7 @@
 
 #import "CDIBatch.h"
 #import "CDIBatch+Package.h"
+#import "NSManagedObject+CDIPrimaryKeys.h"
 
 const NSUInteger CDIOperationBatchSize = 500;
 
@@ -81,7 +82,7 @@ const NSUInteger CDIOperationBatchSize = 500;
 		[self.managedObjectContext save:&error];
 		NSAssert(error == nil, @"NSManagedObjectContext save error:%@", [error localizedDescription]);
 
-		[_managedObjectIDs addObjectsFromArray:[_managedObjects valueForKey:@"objectID"]];
+		[_managedObjectIDs addObjectsFromArray:[batch.managedObjects valueForKey:@"objectID"]];
 
 		[self didEndBatchImport:batch];
 	}
@@ -92,6 +93,10 @@ const NSUInteger CDIOperationBatchSize = 500;
 @implementation CDIOperation (Protected)
 
 - (void)willBeginBatchImport:(CDIBatch *)batch {
+	Class entityClass = NSClassFromString(self.entity.managedObjectClassName);
+	NSString *primaryKey = [entityClass cdi_primaryKeysMap][[entityClass cdi_primaryKey]];
+	id primaryKeyValue = [entityClass cdi_mappedValue:dictionary[primaryKey] forKey:[entityClass cdi_primaryKey]];
+
 
 }
 
@@ -104,7 +109,36 @@ const NSUInteger CDIOperationBatchSize = 500;
 }
 
 - (NSManagedObject *)managedObjectUsingDictionary:(NSDictionary *)dictionary {
+	1. найти/создать объект по primary key из dictionary
+	2. map данных из словаря в полученый объект
+
+
 	return nil;
+
+	NSEntityDescription *de;
+	[[de attributesByName] objectForKey:@"identifier"];
+	NSAttributeDescription *attributeDescription;
+	[attributeDescription attributeType]
+
+	[object cdi_map:dictionary];
+
+	NSManagedObject *object;
+	+[NSManagedObject cdi_mapDictionary:dicitionary toObject:object];
+	+[NSManagedObject cdi_mappedValue:value forKey:@"identifier"];
+}
+
+// NSManagedObject
+
++ (NSString *)cdi_primaryKey {
+	return @"identifier";
+}
+
++ (NSDictionary *)cdi_keyValuesMap {
+	return @{
+		@"identifier": @"UUID",
+		@"name": @"title_name",
+
+	};
 }
 
 @end
