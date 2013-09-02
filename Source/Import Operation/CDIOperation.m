@@ -96,8 +96,6 @@ const NSUInteger CDIOperationBatchSize = 500;
 	Class entityClass = NSClassFromString(self.entity.managedObjectClassName);
 	NSString *primaryKey = [entityClass cdi_primaryKeysMap][[entityClass cdi_primaryKey]];
 	id primaryKeyValue = [entityClass cdi_mappedValue:dictionary[primaryKey] forKey:[entityClass cdi_primaryKey]];
-
-
 }
 
 - (void)willEndBatchImport:(CDIBatch *)batch {
@@ -109,8 +107,25 @@ const NSUInteger CDIOperationBatchSize = 500;
 }
 
 - (NSManagedObject *)managedObjectUsingDictionary:(NSDictionary *)dictionary {
-	1. найти/создать объект по primary key из dictionary
-	2. map данных из словаря в полученый объект
+	
+    Class entityClass = NSClassFromString(self.entity.managedObjectClassName);
+	NSString *primaryKeyMap = [entityClass cdi_primaryKeysMap][[entityClass cdi_primaryKey]];
+    NSString *fetchedPrimaryKey = [dictionary valueForKey:primaryKeyMap];
+    
+    NSManagedObject *object = nil; //entityClass?
+    
+    for (NSManagedObject *entity in self.objects) {
+        if ([[entity valueForKey:[entityClass cdi_primaryKey]] isEqualToString:fetchedPrimaryKey]) {
+            object = entity;
+        }
+    }
+
+    if (!object) {
+        object = [NSEntityDescription insertNewObjectForEntityForName:self.entity inManagedObjectContext:self.managedObjectContext];
+    }
+    
+//    1. найти/создать объект по primary key из dictionary
+//	2. map данных из словаря в полученый объект
 
 
 	return nil;
@@ -129,16 +144,16 @@ const NSUInteger CDIOperationBatchSize = 500;
 
 // NSManagedObject
 
-+ (NSString *)cdi_primaryKey {
-	return @"identifier";
-}
-
-+ (NSDictionary *)cdi_keyValuesMap {
-	return @{
-		@"identifier": @"UUID",
-		@"name": @"title_name",
-
-	};
-}
+//+ (NSString *)cdi_primaryKey {
+//	return @"identifier";
+//}
+//
+//+ (NSDictionary *)cdi_keyValuesMap {
+//	return @{
+//		@"identifier": @"UUID",
+//		@"name": @"title_name",
+//
+//	};
+//}
 
 @end

@@ -13,4 +13,8 @@
 	return nil;
 }
 
++ (id) cdi_identifier {
+    return nil;
+}
+
 @end

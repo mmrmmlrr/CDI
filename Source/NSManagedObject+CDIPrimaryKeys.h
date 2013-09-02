@@ -11,4 +11,7 @@
 
 + (NSDictionary *)cdi_primaryKeysMap;
 
++ (NSString *)cdi_primaryKey;
++ (NSDictionary *)cdi_keyValuesMap;
+
 @end
